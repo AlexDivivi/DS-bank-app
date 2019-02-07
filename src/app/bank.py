@@ -11,7 +11,7 @@ class Bank:
         if not type(account) is app.Account:
             raise AssertionError('Account should be an app.Account')
         elif account.number in self.accounts:
-            raise AssertionError('Account number 1 already taken!')
+            raise AssertionError(f'Account number {account.number} already taken!')
         else:
             self.accounts.update({account.number: account})
             return account
